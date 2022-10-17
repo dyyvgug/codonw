@@ -38,7 +38,15 @@ testing.
 ```bash
 pip install codonw-slim
 ```
-
+### Issues During Installing
+1. LNK1158: cannot run 'rc.exe'  
+   copy ```rc.exe``` and ```rcdll.dll``` from ```C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86``` to ```C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin```
+2. fatal error C1083: Cannot open include file: 'basetsd.h': No such file or directory  
+   Install win10 SDK in Visual Studio Installer.  
+   There is my dependenceis in Visual Studio Installer looks like:  
+   ![](./static-markdown/dependencies.png)
+3. error: Microsoft Visual C++ 14.0 is required  
+   Install something Just as 2.
 ## Usage
 
 The following metrics are available:
