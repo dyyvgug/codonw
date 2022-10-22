@@ -34,9 +34,9 @@ testing.
 
 
 ## Build and Installation
-
+Come to root directory and run this:
 ```bash
-pip install codonw-slim
+python setup.py install
 ```
 ### Issues During Installing
 1. LNK1158: cannot run 'rc.exe'  
