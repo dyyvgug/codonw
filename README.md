@@ -1,9 +1,6 @@
-[![Build Status](https://travis-ci.org/smsaladi/codonw-slim.svg?branch=master)](https://travis-ci.org/smsaladi/codonw-slim)
-[![PyPI version](https://badge.fury.io/py/codonw-slim.svg)](https://badge.fury.io/py/codonw-slim)
-![PyPI - Downloads](https://img.shields.io/pypi/dm/codonw-slim)
-[![DOI](https://data.caltech.edu/badge/209835343.svg)](https://data.caltech.edu/badge/latestdoi/209835343)
 
-codonw-slim
+
+codonw
 ===========
 
 CodonW is a package for codon usage analysis written by John Peden in
@@ -11,34 +8,15 @@ Paul Sharp's group (University of Nottingham).
 It was originally designed to simplify multivariate analysis of codon usage
 with other metrics related to codon usage calculated.
 
-codonw-slim refactors the original codebase to add Python bindings to the
-underlying methods written in C and to focus on the *other* codon usage
-metrics. See below for a list of metrics and their usage.
-
-A detailed description of each metric, with references, can be found in
-in the docstrings of Python methods (`codonw/codonwlib/codonw.pyx`).
-All of the multivariate analysis code has been removed since this sort of
-analysis is more easily done in a higher level language
-(e.g. [FactoMineR](https://cran.r-project.org/web/packages/FactoMineR/index.html)).
-The interative interface has also been removed.
-
-No error checking of nucleotide sequences is done, e.g. for start,
-stop codons, internal stops codons, non-translatable, and partial codons.
-Users should do this themself to inputs provided. For more information about
-how amino acids and codons have are represented internally (`Recoding.md`).
-
-The source code and releases for codonw-slim can be obtained from
-https://www.github.com/smsaladi/codonw-slim. Please report bugs and improvements
-via pull requests at this repository. All modifications must pass regression
-testing.
-
 
 ## Build and Installation
+
 Come to root directory and run this:
 ```bash
 python setup.py install
 ```
 ### Issues During Installing
+# in Windows
 1. LNK1158: cannot run 'rc.exe'  
    copy ```rc.exe``` and ```rcdll.dll``` from ```C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86``` to ```C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin```
 2. fatal error C1083: Cannot open include file: 'basetsd.h': No such file or directory  
@@ -104,17 +82,3 @@ Several references values can be chosen by specifying the corresponding integer.
 If you'd like to have user-provided reference values, please implement this
 functionality and make a pull-request.
 
-
-## Why the name codonW?
-
-Excerpted directly from John Peden's CodonW README...
-
-Well first you must realise that "clustal" (a very popular multiple
-alignment program by Des Higgins) was originally written in Paul's lab in
-Trinity College Dublin. Clustal has since been rewritten from FORTRAN into
-C and undergone several name changes clustal-> clustalv-> clustalw ->
-clustalx. There was also a program called "codons" written in FORTRAN by
-Andrew Lloyd (a post-doc in Paul's lab), this was the original inspiration
-for codonW. An early version of codonW, written in C, was called codonv.
-When the code was enhanced to include multivariate analysis, what better
-name than codonW.
